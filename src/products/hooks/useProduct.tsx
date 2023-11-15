@@ -13,7 +13,7 @@ export const useProduct = ({ id }: Options) => {
     data: product,
     error,
   } = useQuery({
-    queryKey: ["product", { id }],
+    queryKey: ["product", id],
     queryFn: () => productsActions.getProductById(id),
     staleTime: 1000 * 60 * 60,
   });
